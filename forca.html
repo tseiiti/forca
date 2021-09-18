@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <title>Forca</title>
+        <script type="text/javascript" src="forca.js"></script>
+		<style rel="stylesheet" type="text/css">
+			body {
+				font-family: Courier New;
+			}
+		</style>
+    </head>
+    <body>
+        <div id="dadosEscondidos" style="display: none;"> </div>
+        
+        <h1>Forca</h1>
+        
+        <div id="barraTexto" style="position: absolute;"> </div>
+        <img id="barraTempo" src="barra.png" width="0" height="13" style="display: none;">
+        
+        <table width="100%">
+        <tr valign="top">
+        <td>
+        <div id="divPalavraSecreta">
+        <hr>
+        <input id="palavraSecreta" type="password" onkeyup="teclar(event)">
+        <input type="button" value="Palavra Secreta" onclick="iniciar()">
+        <select id="dificuldade">
+            <option value="0">Fácil</option>
+            <option value="1">Médio</option>
+        </select>
+        <hr>
+        </div>
+        
+        letra: <input id="letra" type="text" maxlength="1" size="1" onkeyup="verifica(this.value)">
+        <div id="resultadoTexto" style="font-size: 24pt; font-weight: bold;"> </div>
+        <br/>
+        <div id="letrasErradas" style="color: #ff0000; font-weight: bold;"> </div>
+        </td>
+        
+        <td>
+        <img id="imagemEnforcado" src="0.png">
+        </td>
+        </tr>
+        </table>
+    </body>
+</html>
